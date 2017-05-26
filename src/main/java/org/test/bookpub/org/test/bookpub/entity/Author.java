@@ -6,4 +6,6 @@ package org.test.bookpub.org.test.bookpub.entity;
 public class Author {
 
     private Long id;
+    private String firstName;
+
 }
