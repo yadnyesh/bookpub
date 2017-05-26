@@ -68,4 +68,13 @@ public class Publisher {
         result = 31 * result + (books != null ? books.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Publisher{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", books=" + books +
+                '}';
+    }
 }
