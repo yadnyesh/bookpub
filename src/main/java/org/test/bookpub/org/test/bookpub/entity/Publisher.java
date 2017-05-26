@@ -48,4 +48,24 @@ public class Publisher {
     public void setBooks(List<Book> books) {
         this.books = books;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Publisher publisher = (Publisher) o;
+
+        if (id != null ? !id.equals(publisher.id) : publisher.id != null) return false;
+        if (name != null ? !name.equals(publisher.name) : publisher.name != null) return false;
+        return books != null ? books.equals(publisher.books) : publisher.books == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (books != null ? books.hashCode() : 0);
+        return result;
+    }
 }
