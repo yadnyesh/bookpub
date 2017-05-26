@@ -1,10 +1,12 @@
 package org.test.bookpub.org.test.bookpub.entity;
 
+import javax.persistence.Entity;
 import java.util.List;
 
 /**
  * Created by z063407 on 5/26/17.
  */
+@Entity
 public class Publisher {
     private Long id;
 
