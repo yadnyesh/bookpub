@@ -1,5 +1,6 @@
 package org.test.bookpub.org.test.bookpub.entity;
 
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.List;
 
@@ -8,11 +9,13 @@ import java.util.List;
  */
 public class Author {
 
+    @Id
     private Long id;
     private String firstName;
     private String lastName;
 
     @OneToMany(mappedBy = "author")
     private List<Book> books;
+
 
 }
