@@ -1,5 +1,6 @@
 package org.test.bookpub.org.test.bookpub.entity;
 
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
 public class Author {
 
     @Id
+    @GeneratedValue
     private Long id;
     private String firstName;
     private String lastName;
