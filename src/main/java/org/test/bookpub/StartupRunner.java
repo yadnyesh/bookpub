@@ -10,6 +10,7 @@ import javax.sql.DataSource;
 
 public class StartupRunner implements CommandLineRunner {
     protected final Log logger = LogFactory.getLog(getClass());
+
     @Autowired
     private DataSource ds;
     @Override

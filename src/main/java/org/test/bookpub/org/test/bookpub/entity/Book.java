@@ -1,6 +1,7 @@
 package org.test.bookpub.org.test.bookpub.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by z063407 on 5/25/17.
@@ -23,7 +24,7 @@ public class Book {
         private Publisher publisher;
 
         @ManyToMany
-        private List<Reviewers> reviewers;
+        private List<Reviewer> reviewers;
 
         protected Book() {}
 
@@ -82,11 +83,11 @@ public class Book {
                 this.publisher = publisher;
         }
 
-        public List<Reviewers> getReviewers() {
+        public List<Reviewer> getReviewers() {
                 return reviewers;
         }
 
-        public void setReviewers(List<Reviewers> reviewers) {
+        public void setReviewers(List<Reviewer> reviewers) {
                 this.reviewers = reviewers;
         }
 

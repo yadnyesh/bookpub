@@ -1,6 +1,7 @@
 package org.test.bookpub.org.test.bookpub.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.List;
 
 /**
@@ -8,6 +9,7 @@ import java.util.List;
  */
 @Entity
 public class Publisher {
+    @Id
     private Long id;
 
     private String name;
