@@ -3,6 +3,7 @@ package org.test.bookpub.org.test.bookpub.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.List;
 
 /**
@@ -16,6 +17,7 @@ public class Publisher {
 
     private String name;
 
+    @OneToMany(mappedBy = "publisher")
     private List<Book> books;
 
     protected Publisher() {};

@@ -13,6 +13,7 @@ public class StartupRunner implements CommandLineRunner {
 
     @Autowired
     private DataSource ds;
+
     @Override
     public void run(String... args) throws Exception {
         logger.info("DataSource: "+ds.toString());
