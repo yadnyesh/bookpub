@@ -44,4 +44,24 @@ public class Reviewer {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Reviewer reviewer = (Reviewer) o;
+
+        if (!id.equals(reviewer.id)) return false;
+        if (!firstName.equals(reviewer.firstName)) return false;
+        return lastName.equals(reviewer.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id.hashCode();
+        result = 31 * result + firstName.hashCode();
+        result = 31 * result + lastName.hashCode();
+        return result;
+    }
 }
