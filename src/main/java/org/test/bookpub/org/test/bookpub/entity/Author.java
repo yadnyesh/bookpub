@@ -1,5 +1,6 @@
 package org.test.bookpub.org.test.bookpub.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -8,6 +9,7 @@ import java.util.List;
 /**
  * Created by z063407 on 5/26/17.
  */
+@Entity
 public class Author {
 
     @Id
