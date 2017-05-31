@@ -16,10 +16,16 @@ public class BookController {
     @Autowired
     private BookRepository bookRepository;
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
-    public Iterable<Book> getAllBooks() {
-        return bookRepository.findAll();
+//    @RequestMapping(value = "/", method = RequestMethod.GET)
+//    public Iterable<Book> getAllBooks() {
+//        return bookRepository.findAll();
+//    }
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String hello(){
+        return "Hello";
     }
+
 
     @RequestMapping(value = "{isbn}", method = RequestMethod.GET)
     public Book getBook(@PathVariable String isbn) {
