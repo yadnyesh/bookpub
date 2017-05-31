@@ -21,6 +21,11 @@ public class StartupRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         logger.info("DataSource: "+ds.toString());
-        logger.info("Number of books: " + bookRepository.count());
+        //logger.info("Number of books: " + bookRepository.count());
     }
+
+    public void run() {
+
+    }
+
 }
