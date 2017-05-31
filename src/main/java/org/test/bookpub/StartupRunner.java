@@ -13,15 +13,15 @@ import javax.sql.DataSource;
 public class StartupRunner implements CommandLineRunner {
     protected final Log logger = LogFactory.getLog(getClass());
 
-    @Autowired
-    private DataSource ds;
+//    @Autowired
+//    private DataSource ds;
 
     @Autowired
     private BookRepository bookRepository;
 
     @Override
     public void run(String... args) throws Exception {
-        logger.info("DataSource: "+ds.toString());
+        //logger.info("DataSource: "+ds.toString());
         //logger.info("Number of books: " + bookRepository.count());
     }
 
