@@ -8,4 +8,5 @@ import org.test.bookpub.org.test.bookpub.entity.Book;
  */
 public interface BookRepository extends CrudRepository<Book, Long>{
 
+    Book findBookByIsbn(String isbn);
 }
