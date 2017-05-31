@@ -25,7 +25,7 @@ public class StartupRunner implements CommandLineRunner {
         //logger.info("Number of books: " + bookRepository.count());
     }
 
-    @Scheduled(initialDelay = 1000, fixedDelay = 1000)
+    @Scheduled(initialDelay = 1000, fixedDelay = 10000)
     public void run() {
         logger.info("Number of books: " + bookRepository.count());
     }
