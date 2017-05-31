@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.test.bookpub.org.test.bookpub.entity.Book;
 import org.test.bookpub.repository.BookRepository;
 
-/**
- * Created by z063407 on 5/31/17.
- */
 
 @RestController
 @RequestMapping("/book")
