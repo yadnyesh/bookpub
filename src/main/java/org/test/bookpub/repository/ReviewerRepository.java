@@ -7,6 +7,6 @@ import org.test.bookpub.org.test.bookpub.entity.Reviewer;
 /**
  * Created by z063407 on 5/31/17.
  */
-@RepositoryRestResource
+//@RepositoryRestResource
 public interface ReviewerRepository extends PagingAndSortingRepository<Reviewer, Long>{
 }

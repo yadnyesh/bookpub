@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistrar;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.http.converter.ByteArrayHttpMessageConverter;
+import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,27 +25,27 @@ import java.util.List;
 /**
  * Created by z063407 on 6/1/17.
  */
-@Configuration
+//@Configuration
 public class WebConfiguration extends WebMvcConfigurerAdapter{
 
     @Autowired
     BookRepository bookRepository;
 
-    @Bean
-    public RemoteIpFilter remoteIpFilter() {
-        return new RemoteIpFilter();
-    }
-
-    @Bean
-    public LocaleChangeInterceptor localeChangeInterceptor() {
-        return new LocaleChangeInterceptor();
-    }
-
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(localeChangeInterceptor());
-    }
-
+//    @Bean
+//    public RemoteIpFilter remoteIpFilter() {
+//        return new RemoteIpFilter();
+//    }
+//
+//    @Bean
+//    public LocaleChangeInterceptor localeChangeInterceptor() {
+//        return new LocaleChangeInterceptor();
+//    }
+//
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(localeChangeInterceptor());
+//    }
+//
     @Bean
     public ByteArrayHttpMessageConverter byteArrayHttpMessageConverter() {
         return new ByteArrayHttpMessageConverter();
@@ -54,5 +55,16 @@ public class WebConfiguration extends WebMvcConfigurerAdapter{
     public void addFormatters(FormatterRegistry registry){
         registry.addFormatter(new BookFormatter(bookRepository));
     }
+
+    @Override
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+        converters.add(new ByteArrayHttpMessageConverter());
+    }
+
+//    @Override
+//    public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
+//        converters.clear();
+//        converters.add(new ByteArrayHttpMessageConverter());
+//    }
 
 }

@@ -21,7 +21,7 @@ public class BookFormatter implements Formatter<Book>{
     @Override
     public Book parse(String bookIdentifier, Locale locale) throws ParseException {
         Book book = repository.findBookByIsbn(bookIdentifier);
-        return book != null ? book : repository.findOne(Long.valueOf(bookIdentifier));
+        return book;//book != null ? book : repository.findOne(Long.valueOf(bookIdentifier));
     }
 
     @Override

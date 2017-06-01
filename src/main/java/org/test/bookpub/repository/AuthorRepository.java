@@ -7,6 +7,6 @@ import org.test.bookpub.org.test.bookpub.entity.Author;
 /**
  * Created by z063407 on 5/31/17.
  */
-@RepositoryRestResource
+//@RepositoryRestResource
 public interface AuthorRepository extends PagingAndSortingRepository <Author, Long>{
 }
