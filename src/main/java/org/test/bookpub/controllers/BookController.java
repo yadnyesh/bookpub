@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.test.bookpub.Isbn;
 import org.test.bookpub.org.test.bookpub.entity.Book;
 import org.test.bookpub.repository.BookRepository;
 
@@ -33,4 +34,7 @@ public class BookController {
     }
 
 
+    public Book getBook(@PathVariable Isbn isbn) {
+
+    }
 }

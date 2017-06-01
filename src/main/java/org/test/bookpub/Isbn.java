@@ -15,4 +15,7 @@ public class Isbn {
         this.isbn = isbn;
     }
 
+    public Isbn(String isbn) {
+        this.isbn = isbn;
+    }
 }
