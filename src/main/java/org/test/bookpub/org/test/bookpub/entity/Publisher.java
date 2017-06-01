@@ -22,6 +22,10 @@ public class Publisher {
 
     protected Publisher() {};
 
+    public Publisher(String name) {
+        this.name = name;
+    }
+
     public Publisher(Long id, String name, List<Book> books) {
         this.id = id;
         this.name = name;
