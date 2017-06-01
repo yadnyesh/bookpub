@@ -1,6 +1,8 @@
 package org.test.bookpub;
 
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 
 import java.beans.PropertyEditorSupport;
 
@@ -26,6 +28,11 @@ public class IsbnEditor extends PropertyEditorSupport{
         else {
             return "";
         }
+    }
+
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        binder.registerCustomEditor(Isbn.class, new IsbnEditor());
     }
 
 }

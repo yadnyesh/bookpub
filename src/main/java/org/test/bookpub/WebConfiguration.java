@@ -55,8 +55,4 @@ public class WebConfiguration extends WebMvcConfigurerAdapter{
         registry.addFormatter(new BookFormatter(bookRepository));
     }
 
-    @RequestMapping(value = "/{isbn}/reviewers", method = RequestMethod.GET)
-    public List<Reviewer> getReviewers(@PathVariable("isbn") Book book) {
-        return book.getReviewers();
-    }
 }
